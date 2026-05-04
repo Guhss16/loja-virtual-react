@@ -6,6 +6,10 @@ export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   console.log("Cart atualizado:", cartItems);
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const addToCart = (product, quantity = 1) => {
     setCartItems((prev) => {
       const itemExists = prev.find((item) => item.id === product.id);
@@ -52,6 +56,7 @@ export function CartProvider({ children }) {
         removeFromCart,
         increaseQuantity,
         decreaseQuantity,
+        clearCart,
       }}
     >
       {children}

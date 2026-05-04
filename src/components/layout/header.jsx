@@ -1,8 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
+import { useCart } from "../../context/CartContext";
 
 export default function Header() {
   const navigate = useNavigate();
+  const { cartItems } = useCart();
+
+  const cartCount = cartItems.length;
 
   return (
     <header>
@@ -13,11 +17,18 @@ export default function Header() {
         >
           Loja Virtual TGID
         </h1>
-        <ShoppingCart
-          size={24}
+        <div
+          className="relative cursor-pointer"
           onClick={() => navigate("/cart")}
-          className="cursor-pointer"
-        />
+        >
+          <ShoppingCart size={24} />
+
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+              {cartCount}
+            </span>
+          )}
+        </div>
       </div>
     </header>
   );
