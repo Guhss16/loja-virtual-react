@@ -1,0 +1,139 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camiseta Básica",
+      "price": 59.9,
+      "description": "Camiseta confortável 100% algodão.",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400",
+      "category": "Roupas",
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "name": "Calça Jeans Slim",
+      "price": 149.9,
+      "description": "Calça jeans moderna com ótimo caimento.",
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400",
+      "category": "Roupas",
+      "stock": 7
+    },
+    {
+      "id": 3,
+      "name": "Jaqueta Masculina",
+      "price": 249.9,
+      "description": "Jaqueta estilosa para dias frios.",
+      "image": "https://images.unsplash.com/photo-1520975916090-3105956dac38?w=400",
+      "category": "Roupas",
+      "stock": 5
+    },
+    {
+      "id": 4,
+      "name": "Tênis Esportivo",
+      "price": 199.9,
+      "description": "Tênis leve ideal para corrida.",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+      "category": "Calçados",
+      "stock": 8
+    },
+    {
+      "id": 5,
+      "name": "Tênis Casual",
+      "price": 159.9,
+      "description": "Tênis confortável para o dia a dia.",
+      "image": "https://images.unsplash.com/photo-1528701800489-20be3c1c0c88?w=400",
+      "category": "Calçados",
+      "stock": 6
+    },
+    {
+      "id": 6,
+      "name": "Sandália Feminina",
+      "price": 89.9,
+      "description": "Sandália leve e elegante.",
+      "image": "https://images.unsplash.com/photo-1582582494700-3f3b6f3b91cb?w=400",
+      "category": "Calçados",
+      "stock": 12
+    },
+    {
+      "id": 7,
+      "name": "Relógio Digital",
+      "price": 129.9,
+      "description": "Relógio moderno com várias funções.",
+      "image": "https://images.unsplash.com/photo-1518444028785-8f67d5b9f9d1?w=400",
+      "category": "Acessórios",
+      "stock": 9
+    },
+    {
+      "id": 8,
+      "name": "Óculos de Sol",
+      "price": 79.9,
+      "description": "Proteção UV com muito estilo.",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400",
+      "category": "Acessórios",
+      "stock": 15
+    },
+    {
+      "id": 9,
+      "name": "Boné Street",
+      "price": 49.9,
+      "description": "Boné moderno estilo urbano.",
+      "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=400",
+      "category": "Acessórios",
+      "stock": 20
+    },
+    {
+      "id": 10,
+      "name": "Mochila Casual",
+      "price": 99.9,
+      "description": "Mochila resistente para o dia a dia.",
+      "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400",
+      "category": "Bolsas",
+      "stock": 11
+    },
+    {
+      "id": 11,
+      "name": "Bolsa Feminina",
+      "price": 139.9,
+      "description": "Bolsa elegante para diversas ocasiões.",
+      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400",
+      "category": "Bolsas",
+      "stock": 6
+    },
+    {
+      "id": 12,
+      "name": "Carteira Masculina",
+      "price": 59.9,
+      "description": "Carteira compacta e resistente.",
+      "image": "https://images.unsplash.com/photo-1585386959984-a4155228c63f?w=400",
+      "category": "Acessórios",
+      "stock": 14
+    },
+    {
+      "id": 13,
+      "name": "Smartwatch",
+      "price": 299.9,
+      "description": "Relógio inteligente com monitoramento de saúde.",
+      "image": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=400",
+      "category": "Eletrônicos",
+      "stock": 4
+    },
+    {
+      "id": 14,
+      "name": "Fone Bluetooth",
+      "price": 119.9,
+      "description": "Som de qualidade sem fio.",
+      "image": "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?w=400",
+      "category": "Eletrônicos",
+      "stock": 10
+    },
+    {
+      "id": 15,
+      "name": "Teclado Mecânico",
+      "price": 249.9,
+      "description": "Teclado gamer com alta precisão.",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400",
+      "category": "Eletrônicos",
+      "stock": 3
+    }
+  ]
+}
