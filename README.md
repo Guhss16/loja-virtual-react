@@ -34,22 +34,4 @@ npx json-server dbTeste.json --port 3001
 
 http://localhost:3001/products
 
-## 📁 Estrutura
-
-src/
-├── components/
-├── context/
-├── pages/
-├── services/
-
-## 🎯 Melhorias futuras
-
-- LocalStorage no carrinho
-- Autenticação
-- Ordenação de produtos
-- Skeleton loading
-- Checkout avançado
-
----
-
 Projeto desenvolvido para teste técnico de front-end.
