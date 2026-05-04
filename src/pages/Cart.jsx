@@ -12,7 +12,6 @@ function Cart() {
   if (cartItems.length === 0) {
     return <p className="p-4">Seu carrinho está vazio.</p>;
   }
-  console.log(cartItems);
 
   return (
     <div className="p-4 max-w-4xl mx-auto">
@@ -22,7 +21,7 @@ function Cart() {
         {cartItems.map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-between border p-4 rounded"
+            className="flex flex-col gap-4 md:flex-row items-center justify-between border p-4 rounded"
           >
             <div className="flex items-center gap-4">
               <img
@@ -74,7 +73,7 @@ function Cart() {
       <div className="mt-6 text-right">
         <h2 className="text-xl font-bold">Total: R$ {total.toFixed(2)}</h2>
 
-        <button className="mt-4 bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+        <button className="mt-4 bg-[#252525] text-[#fdb71a] px-6 py-2 rounded hover:bg-[#151515] transition">
           Finalizar compra
         </button>
       </div>
