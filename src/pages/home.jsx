@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../services/api";
 import ProductCard from "../components/product/ProductCard";
 import { useNavigate } from "react-router-dom";
+import ActionButton from "../components/ui/actionButton";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -10,6 +11,17 @@ export default function Home() {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 6;
+
+  const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const filteredProducts = products
+    .filter((product) =>
+      product.name.toLowerCase().includes(search.toLowerCase()),
+    )
+    .filter((product) =>
+      selectedCategory ? product.category === selectedCategory : true,
+    );
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -31,9 +43,10 @@ export default function Home() {
 
   const categories = [...new Set(products.map((p) => p.category))];
 
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
   const startIndex = (currentPage - 1) * productsPerPage;
-  const currentProducts = products.slice(
+
+  const currentProducts = filteredProducts.slice(
     startIndex,
     startIndex + productsPerPage,
   );
@@ -44,22 +57,38 @@ export default function Home() {
         <input
           type="text"
           placeholder="Buscar produtos..."
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setCurrentPage(1);
+          }}
           className="border border-[#fdb71a] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#fdb71a] shadow-md"
         />
         <div className="border border-[#fbd71a] rounded px-3 py-2 shadow-md">
           <p className="font-bold mb-[10px]">Categorias</p>
           {categories.map((category, index) => (
-            <p className="cursor-pointer w-fit mb-[5px]" key={index}>
+            <p
+              key={index}
+              onClick={() => {
+                setSelectedCategory(category);
+                setCurrentPage(1);
+              }}
+              className={`cursor-pointer w-fit mb-[5px] ${
+                selectedCategory === category ? "font-bold text-[#fdb71a]" : ""
+              }`}
+            >
               {category}
             </p>
           ))}
         </div>
+        <ActionButton
+          onClick={() => setSelectedCategory("")}
+          text="Limpar filtro"
+        />
       </div>
 
       <div className="w-full">
         <h1 className="text-2xl font-semibold">Produtos</h1>
-        <button onClick={() => navigate("/cart")}></button>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {currentProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
