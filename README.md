@@ -22,11 +22,11 @@ Projeto de e-commerce desenvolvido como **teste técnico para vaga de desenvolve
 ## ⚙️ Como rodar
 
 ```bash
-# Rodar frontend
+# Rodar frontend (http://localhost:5173)
 npm install
 npm run dev
 
-# Rodar API fake
+# Rodar API fake (http://localhost:3001/products)
 npx json-server dbTeste.json --port 3001
 ```
 
