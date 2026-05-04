@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getProductById } from "../services/api";
+import { useCart } from "../context/CartContext";
 
 export default function ProductDetail() {
   const { id } = useParams();
+  const { addToCart } = useCart();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -32,7 +35,10 @@ export default function ProductDetail() {
         <h1>{product.name}</h1>
         <p>{product.description}</p>
         <p>Preço: R$ {product.price.toFixed(2)}</p>
-        <button>Adicionar ao Carrinho</button>
+        <button onClick={() => addToCart(product)}>
+          Adicionar ao Carrinho
+        </button>
+        <button onClick={() => navigate("/cart")}>Ir para o carrinho</button>
       </div>
     </div>
   );

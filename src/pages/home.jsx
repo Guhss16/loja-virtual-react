@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../services/api";
 import ProductCard from "../components/product/ProductCard";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -28,6 +30,7 @@ export default function Home() {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Produtosssss</h1>
+      <button onClick={() => navigate("/cart")}></button>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {products.map((product) => (
